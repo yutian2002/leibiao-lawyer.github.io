@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>沈知远律师 | 劳动争议 · 合同纠纷 · 保险理赔 · 民间借贷</title>
+<meta name="description" content="沈知远律师个人网站：代理劳动争议、买卖合同、保险合同、民间借贷等本地常见纠纷。代表案例、专业文章与联系方式。">
+<!-- ============================================================
+     律师个人品牌网站 · 单文件版
+     设计体系：编辑部×法典体例（编号章节/发丝线/衬线咏叹/等宽微标签）
+              + 数字白盒子（展签体例/系列纪律/中轴对称/克制动效）
+     色彩：纸白 #F7F7F9 · 墨阶 slate · 金箔点缀 #B08A4A（出现率<5%）
+     字体：Manrope（骨架）+ LXGW文楷（手迹·楷书）+ Space Mono（眉批）
+     ★ 所有个人信息均为占位内容，搜索「替换」注释逐项替换即可
+     ============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<!-- 替换掉的旧体系：Inter + Noto Serif SC(斜体) + JetBrains Mono（不允法典同款） -->
+<!-- 新体系「文房三宝」：Manrope 骨架 / LXGW文楷 手迹 / Space Mono 眉批 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css"></noscript>
+<style>
+/* ============ 0. 设计令牌 ============ */
+:root{
+  --paper:#F7F7F9;          /* 展墙 · 纸白 */
+  --paper-warm:#F4F3EF;     /* 转场暖纸 */
+  --ink:#0F172A;            /* 墨主 slate-900 */
+  --ink-2:#334155;          /* 墨中 slate-700 */
+  --ink-3:#64748B;          /* 墨弱 slate-500 */
+  --ink-4:#94A3B8;          /* 墨淡 slate-400 */
+  --line:rgba(15,23,42,.10);/* 发丝线 */
+  --line-2:#E2E8F0;
+  --gold:#B08A4A;           /* 金箔 · 全站唯一暖色 */
+  --gold-soft:rgba(176,138,74,.14);
+  --ease:cubic-bezier(.16,1,.3,1);
+  --mono:'Space Mono',ui-monospace,Menlo,Consolas,monospace;
+  --kai:'LXGW WenKai','LXGW WenKai Screen','Kaiti SC','STKaiti','KaiTi','DFKai-SB',serif;
+  --sans:'Manrope',-apple-system,'PingFang SC','MiSans','HarmonyOS Sans SC',sans-serif;
+  --gold-ink:#8A6A33;   /* 金褐墨 · 手迹强调色 */
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-padding-top:96px}
+body{
+  font-family:var(--sans);background:var(--paper);color:var(--ink-2);
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;line-height:1.75;
+}
+::selection{background:var(--ink);color:#fff}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:88rem;margin:0 auto;padding:0 1.5rem}
+
+/* ============ 1. 材质：纸纹噪点（白盒子的"墙"）============ */
+.noise-bg{position:fixed;inset:0;z-index:2000;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.028'/%3E%3C/svg%3E");}
+
+/* ============ 2. 阅读进度条（墨色）============ */
+#progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:3000;
+  background:linear-gradient(90deg,#0F172A,#334155,#94A3B8)}
+
+/* ============ 3. 自定义光标（仅精确指针设备）============ */
+@media (pointer:fine){
+}
+
+/* ============ 4. 导航（编辑部刊头）============ */
+nav{position:fixed;width:100%;z-index:1500;top:0;transition:all .5s var(--ease);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  background:rgba(247,247,249,.78);border-bottom:1px solid rgba(15,23,42,.08)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:baseline;gap:.8rem}
+.brand .zh{font-family:var(--kai);font-weight:500;font-size:1.25rem;letter-spacing:.14em;color:var(--ink)}
+.brand .en{font-family:var(--mono);font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-4)}
+.nav-links{display:flex;align-items:center;gap:2.2rem}
+.nav-links a{font-size:.85rem;font-weight:500;color:var(--ink-2);position:relative;transition:color .3s}
+.nav-links a i{font-family:var(--mono);font-style:normal;font-size:.6rem;color:var(--ink-4);margin-right:.45em;vertical-align:2px}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;height:1px;width:0;background:var(--ink);transition:width .35s var(--ease)}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{display:inline-flex;align-items:center;padding:.6rem 1.4rem;border-radius:999px;
+  background:var(--ink);color:#fff;font-size:.8rem;font-weight:500;letter-spacing:.02em;
+  transition:transform .3s var(--ease),box-shadow .3s;box-shadow:0 10px 26px rgba(15,23,42,.18)}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(15,23,42,.24)}
+@media (max-width:900px){.nav-links{display:none}}
+
+/* ============ 5. 章节体例（法典编号 + 发丝线）============ */
+section.shell{position:relative;padding:6.5rem 0 7rem}
+.editorial-line::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--line)}
+.eyebrow{font-family:var(--mono);font-size:.62rem;font-weight:700;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--ink-4);display:flex;align-items:center;gap:.9rem}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--gold)}  /* 金箔仅此一线 */
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;margin-bottom:3.6rem;flex-wrap:wrap}
+.sec-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;letter-spacing:0;color:var(--ink);line-height:1.2;margin-top:1.1rem}
+.sec-title em{font-family:var(--kai);font-style:normal;font-weight:500;letter-spacing:.04em;color:var(--gold-ink)}
+.sec-note{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-4)}
+
+/* ============ 6. Hero（门厅 · 单件镇馆）============ */
+#hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:9.5rem 0 5rem;overflow:hidden}
+.hero-bg-text{position:absolute;top:44%;left:50%;transform:translate(-50%,-50%);
+  font-family:var(--kai);font-weight:400;font-size:clamp(11rem,36vw,30rem);letter-spacing:0;
+  color:transparent;-webkit-text-stroke:1px rgba(15,23,42,.07);user-select:none;pointer-events:none;white-space:nowrap;z-index:0}
+.floating-symbol{position:absolute;pointer-events:none;user-select:none;z-index:1;color:rgba(15,23,42,.14);
+  animation:float-sym 8s ease-in-out infinite}
+.floating-symbol.s1{font-family:var(--kai);font-size:4.5rem;top:16%;left:6%}
+.floating-symbol.s2{font-family:var(--mono);font-size:3.2rem;bottom:24%;left:42%;animation-delay:-3s}
+.floating-symbol.s3{font-family:var(--kai);font-size:5rem;top:20%;right:7%;animation-delay:-5s}
+@keyframes float-sym{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-16px) rotate(2deg)}}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:repeat(12,1fr);gap:2.5rem;align-items:center;width:100%}
+.hero-main{grid-column:span 8}
+h1.hero-title{font-family:var(--kai);font-size:clamp(2.7rem,6.2vw,5.1rem);font-weight:600;letter-spacing:.05em;line-height:1.22;color:var(--ink)}
+h1.hero-title em{font-style:normal;font-weight:600;letter-spacing:.05em;color:var(--gold-ink)}
+.title-reveal{clip-path:inset(0 100% 0 0)}
+.title-reveal.is-revealed{clip-path:inset(0 0 0 0);transition:clip-path 1.1s var(--ease)}
+.hero-desc{max-width:34rem;margin:1.8rem 0 2.4rem;font-weight:400;font-size:1.02rem;color:var(--ink-3)}
+.hero-desc strong{font-weight:500;color:var(--ink-2)}
+.cta-row{display:flex;gap:1rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 2rem;border-radius:999px;
+  font-size:.9rem;font-weight:500;transition:all .35s var(--ease);cursor:pointer;white-space:nowrap}
+.btn-solid{background:var(--ink);color:#fff;box-shadow:0 18px 40px rgba(15,23,42,.22)}
+.btn-solid:hover{transform:translateY(-3px);box-shadow:0 24px 48px rgba(15,23,42,.28)}
+.btn-ghost{border:1px solid #CBD5E1;color:var(--ink-2);background:transparent}
+.btn-ghost:hover{border-color:var(--ink);color:var(--ink);background:#fff;transform:translateY(-3px)}
+/* Hero 业务标签 + 执业数据条（替代原档案卡） */
+.hero-tags{margin-top:2.6rem;display:flex;flex-direction:column;gap:1.6rem}
+.hero-stats{display:flex;gap:2.8rem;flex-wrap:wrap;padding-top:1.4rem;border-top:1px solid rgba(15,23,42,.08)}
+.hs b{display:block;font-size:1.5rem;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+.hs b i{font-style:normal;font-size:.9rem;font-weight:500;color:var(--ink-3)}
+.hs span{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;color:var(--ink-4);text-transform:uppercase}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
+.chip{font-size:.68rem;padding:.32rem .8rem;border-radius:999px;border:1px solid rgba(15,23,42,.16);color:var(--ink-3);background:rgba(255,255,255,.6)}
+/* 旋转圆徽章 */
+.circular-badge{position:absolute;bottom:-3.5rem;right:2rem;width:130px;height:130px;z-index:3;opacity:.9}
+.circular-badge svg{width:100%;height:100%;animation:spin 26s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-main{grid-column:span 1}
+  .circular-badge{display:none}
+  .floating-symbol{display:none}
+  #hero{padding:8rem 0 3.5rem}
+}
+
+/* ============ 7. 关于（编辑部 7/5 非对称）============ */
+.about-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:2.8rem}
+.about-text{grid-column:span 7}
+.about-visual{grid-column:span 5}
+.about-lead{font-family:var(--kai);font-size:clamp(1.35rem,2.2vw,1.8rem);font-weight:400;letter-spacing:.03em;
+  line-height:1.7;color:var(--ink);margin-bottom:2.2rem;padding-left:1.4rem;border-left:2px solid var(--gold)}
+.about-body p{margin-bottom:1.2rem;font-weight:300;color:var(--ink-3)}
+.about-body p strong{font-weight:500;color:var(--ink-2)}
+.cred{margin-top:2.8rem}
+.cred-title{font-family:var(--mono);font-size:.62rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-4);margin-bottom:1.2rem}
+.cred-row{display:grid;grid-template-columns:9rem 1fr;gap:1rem;padding:.85rem 0;border-top:1px solid rgba(15,23,42,.08);font-size:.86rem;align-items:baseline}
+.cred-row .k{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;color:var(--ink-4)}
+.cred-row .v{color:var(--ink-2)}
+/* 肖像框（白盒子：画框 + 展签） */
+.portrait-frame{position:relative;border:1px solid rgba(15,23,42,.14);border-radius:1.25rem;overflow:hidden;background:#fff}
+.portrait-inner{aspect-ratio:4/4.6;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(160deg,#EEF1F4 0%,#E8E9E4 55%,#E4E1D8 100%)}
+.portrait-inner .glyph{font-family:var(--kai);font-weight:400;font-size:6.2rem;letter-spacing:.1em;
+  color:transparent;-webkit-text-stroke:1.5px rgba(15,23,42,.28)}
+.portrait-caption{padding:1.1rem 1.4rem;border-top:1px solid rgba(15,23,42,.08);display:flex;justify-content:space-between;align-items:baseline}
+.portrait-caption .t{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-4)}
+.portrait-caption .d{font-size:.72rem;color:var(--ink-3)}
+@media (max-width:900px){.about-grid{grid-template-columns:1fr}.about-text,.about-visual{grid-column:span 1}}
+
+/* ============ 8. 暗色理念带（深海白盒）============ */
+#manifesto{position:relative;background:#0F172A;color:#E7E9EE;overflow:hidden;padding:7.5rem 0}
+#manifesto::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(148,163,184,.5),transparent)}
+.dark-glow{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none}
+.dark-glow.g1{width:46vw;height:46vw;background:rgba(56,189,248,.07);top:-12%;left:-12%;animation:blob 20s ease-in-out infinite alternate}
+.dark-glow.g2{width:40vw;height:40vw;background:rgba(129,140,248,.07);bottom:-12%;right:-8%;animation:blob 22s ease-in-out infinite alternate-reverse}
+@keyframes blob{to{transform:translate(4%,-6%) scale(1.08)}}
+.mani-stroke{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  font-family:var(--kai);font-weight:400;font-size:clamp(6rem,17vw,14rem);line-height:1;letter-spacing:.08em;
+  color:transparent;-webkit-text-stroke:1px rgba(236,231,220,.06);white-space:nowrap;user-select:none;pointer-events:none}
+.mani-inner{position:relative;z-index:2;max-width:56rem;margin:0 auto;text-align:center;padding:0 1.5rem}
+.mani-eyebrow{font-family:var(--mono);font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(236,231,220,.45)}
+.mani-quote{margin:2.6rem 0;font-family:var(--kai);font-weight:500;letter-spacing:.06em;
+  font-size:clamp(1.7rem,4vw,2.9rem);line-height:1.55;color:#ECE7DC;letter-spacing:.01em}
+.mani-quote .g{color:#C9A86A}
+.mani-sub{font-weight:400;color:rgba(231,233,238,.6);max-width:40rem;margin:0 auto;font-size:.95rem;line-height:1.9}
+.mani-line{width:64px;height:1px;background:var(--gold);margin:2.4rem auto 0}
+.mani-attr{margin-top:1.2rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(236,231,220,.4)}
+
+/* ============ 9. 代表案例（白盒子展签室）============ */
+#cases{background:#FCFCFD}
+.more-note{text-align:center;font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;color:var(--ink-4);margin-top:2.4rem}
+.more-note b{color:var(--ink-3);font-weight:700}
+.cases-disclaimer{display:flex;align-items:center;gap:.7rem;justify-content:center;margin-bottom:3.4rem;
+  font-size:.72rem;color:var(--ink-4);text-align:center}
+.cases-disclaimer::before{content:"";width:18px;height:1px;background:var(--gold);flex:none}
+.case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.6rem}
+.case-card{position:relative;background:#fff;border:1px solid rgba(15,23,42,.10);border-radius:1.1rem;
+  padding:1.9rem 1.8rem 1.6rem;overflow:hidden;transition:transform .45s var(--ease),border-color .45s,box-shadow .45s}
+.case-card:hover{transform:translateY(-6px);border-color:rgba(15,23,42,.32);box-shadow:0 26px 54px rgba(15,23,42,.10)}
+.case-card .cg{position:absolute;inset:0;border-radius:inherit;opacity:0;transition:opacity .5s;pointer-events:none;
+  background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),var(--gold-soft),transparent 45%)}
+.case-card:hover .cg{opacity:1}
+.cc-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.1rem}
+.cc-num{font-family:var(--mono);font-size:.68rem;font-weight:700;letter-spacing:.16em;color:var(--ink-4)}
+.cc-tag{font-size:.62rem;font-weight:700;letter-spacing:.1em;padding:.26rem .7rem;border-radius:999px;
+  border:1px solid rgba(15,23,42,.14);color:var(--ink-3);background:#F7F7F9}
+.cc-title{font-size:1.12rem;font-weight:600;letter-spacing:-.01em;color:var(--ink);margin-bottom:1.15rem;line-height:1.5}
+/* 展签体例：字段: 值 */
+.cc-labels{border-top:1px solid rgba(15,23,42,.08);padding-top:1rem;display:grid;gap:.45rem}
+.cc-labels .lab{display:grid;grid-template-columns:4.2rem 1fr;gap:.6rem;font-size:.76rem;align-items:baseline}
+.cc-labels .lab .k{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;color:var(--ink-4)}
+.cc-labels .lab .v{color:var(--ink-2)}
+.cc-desc{margin-top:1rem;font-size:.8rem;font-weight:400;color:var(--ink-3);line-height:1.8}
+@media (max-width:860px){.case-grid{grid-template-columns:1fr}}
+
+/* ============ 10. 专业文章（编辑部索引卡）============ */
+.art-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.6rem}
+.art-card{position:relative;background:rgba(255,255,255,.55);border:1px solid rgba(15,23,42,.10);
+  border-radius:1.1rem;padding:1.9rem 1.8rem;display:flex;flex-direction:column;
+  transition:transform .45s var(--ease),border-color .45s,box-shadow .45s}
+.art-card:hover{transform:translateY(-6px);border-color:rgba(15,23,42,.32);box-shadow:0 26px 54px rgba(15,23,42,.10)}
+.ac-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:.9rem}
+.ac-cat{font-family:var(--mono);font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-4)}
+.ac-new{font-size:.6rem;font-weight:700;letter-spacing:.1em;color:var(--gold);border:1px solid rgba(176,138,74,.4);
+  padding:.2rem .6rem;border-radius:999px}
+.ac-title{font-size:1.08rem;font-weight:600;color:var(--ink);line-height:1.55;margin-bottom:.7rem}
+.ac-excerpt{font-size:.8rem;font-weight:300;color:var(--ink-3);line-height:1.8;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.ac-foot{margin-top:1.2rem;display:flex;justify-content:space-between;align-items:center;
+  border-top:1px solid rgba(15,23,42,.07);padding-top:1.2rem;font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;color:var(--ink-4)}
+.ac-arrow{font-size:1rem;transition:transform .35s var(--ease);color:var(--ink-3)}
+.art-card:hover .ac-arrow{transform:translateX(6px);color:var(--gold)}
+@media (max-width:860px){.art-grid{grid-template-columns:1fr}}
+
+/* ============ 11. 联系（前台 · 展签体例）============ */
+.contact-box{max-width:44rem;margin:0 auto;text-align:center}
+.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin:3rem 0 2.4rem;text-align:left}
+.contact-cell{background:rgba(255,255,255,.55);border:1px solid rgba(15,23,42,.10);border-radius:1.1rem;
+  padding:1.5rem 1.6rem;transition:transform .4s var(--ease),border-color .4s;position:relative;overflow:hidden;display:block}
+.contact-cell:hover{transform:translateY(-4px);border-color:rgba(15,23,42,.3)}
+.contact-cell .k{font-family:var(--mono);font-size:.6rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-4);margin-bottom:.55rem}
+.contact-cell .v{font-size:1rem;font-weight:500;color:var(--ink);word-break:break-all}
+.contact-cell .d{font-size:.72rem;color:var(--ink-3);margin-top:.3rem}
+.qr-slot{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;
+  border:1.5px dashed rgba(176,138,74,.55);border-radius:1rem;aspect-ratio:1/1;background:rgba(255,255,255,.4)}
+.qr-slot .q{font-size:2rem;color:var(--gold);opacity:.7;line-height:1}
+.qr-slot .t{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;color:var(--ink-4);text-transform:uppercase}
+@media (max-width:700px){.contact-grid{grid-template-columns:1fr}}
+
+/* ============ 12. 跑马灯 + 页脚 ============ */
+.marquee{overflow:hidden;padding:2.6rem 0;border-top:1px solid var(--line);white-space:nowrap}
+.marquee-content{display:inline-flex;animation:marquee 40s linear infinite;
+  font-family:var(--kai);font-weight:400;font-size:4.2rem;letter-spacing:.12em;color:transparent;
+  -webkit-text-stroke:1px rgba(15,23,42,.16)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+footer{padding:2.4rem 1.5rem;text-align:center;background:#fff;border-top:1px solid var(--line)}
+footer .f1{font-family:var(--mono);font-size:.6rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-4)}
+footer .f2{font-size:.66rem;color:var(--ink-4);margin-top:.5rem;font-weight:400}
+
+/* ============ 13. 键盘快捷键面板 ============ */
+.kbd-modal{position:fixed;inset:0;z-index:5000;display:none;align-items:center;justify-content:center;
+  background:rgba(15,23,42,.35);backdrop-filter:blur(6px)}
+.kbd-modal.open{display:flex}
+.kbd-panel{width:20rem;background:#fff;border:1px solid var(--line-2);border-radius:1.1rem;padding:1.5rem;box-shadow:0 30px 70px rgba(15,23,42,.2)}
+.kbd-title{font-family:var(--mono);font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-4);margin-bottom:.8rem}
+.kbd-row{display:flex;justify-content:space-between;align-items:center;padding:.5rem 0;border-bottom:1px solid #F1F5F9;font-size:.8rem;color:var(--ink-2)}
+.kbd-row:last-of-type{border-bottom:0}
+.kbd-row .keys{font-family:var(--mono);font-size:.66rem;color:var(--ink-4)}
+kbd{display:inline-block;padding:.12rem .45rem;margin-left:.3rem;font-family:var(--mono);font-size:.64rem;
+  background:#F1F5F9;border:1px solid #CBD5E1;border-radius:.3rem;box-shadow:0 1px 0 #CBD5E1;color:var(--ink);min-width:1.4rem;text-align:center}
+
+/* ============ 14. 滚动显现 + 降级 ============ */
+.rv{opacity:0;transform:translateY(40px)}
+.rv.is-in{opacity:1;transform:translateY(0);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+@media (max-width:768px){
+  .rv{opacity:1;transform:none}
+  .noise-bg{display:none}
+  section.shell{padding:4.2rem 0 4.6rem}
+  .marquee-content{font-size:2.6rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  .title-reveal{clip-path:none}
+}
+</style>
+</head>
+<body>
+
+<div class="noise-bg" aria-hidden="true"></div>
+<div id="progress"></div>
+
+<!-- ================= 导航（刊头） ================= -->
+<nav id="nav">
+  <div class="wrap">
+    <a href="#hero" class="brand">
+      <!-- 替换：您的姓名 -->
+      <span class="zh">雷彪</span>
+      <span class="en">Attorney&nbsp;at&nbsp;Law</span>
+    </a>
+    <div class="nav-links">
+      <a href="#about"><i>[01]</i>关于</a>
+      <a href="#cases"><i>[02]</i>案例</a>
+      <a href="#writing"><i>[03]</i>文章</a>
+      <a href="#contact"><i>[04]</i>联系</a>
+    </div>
+    <a href="#contact" class="nav-cta">预约咨询</a>
+  </div>
+</nav>
+
+<!-- ================= [00] 门厅 · Hero ================= -->
+<section id="hero">
+  <div class="hero-bg-text" aria-hidden="true">衡</div>
+  <div class="floating-symbol s1" aria-hidden="true">§</div>
+  <div class="floating-symbol s2" aria-hidden="true">{ }</div>
+  <div class="floating-symbol s3" aria-hidden="true">&amp;</div>
+
+  <div class="wrap hero-grid">
+    <div class="hero-main">
+      <div class="eyebrow rv">[ 00 ]&nbsp;&nbsp;Attorney Profile</div>
+      <h1 class="hero-title title-reveal" id="heroTitle">
+        把复杂留给我，<br>把<em>确定性</em>留给您。
+      </h1>
+      <p class="hero-desc rv" data-delay="120">
+        雷彪律师，执业于湖北省荆州市：代理<strong>劳动争议、买卖合同、保险合同、民间借贷</strong>等
+        本地常见纠纷，以「把话说清楚、把证据链做扎实」为方法——每一份文书、每一次出庭，都经得起推敲。
+      </p>
+      <div class="cta-row rv" data-delay="240">
+        <a href="#cases" class="btn btn-solid">查看代表案例 <span>↓</span></a>
+        <a href="#writing" class="btn btn-ghost">阅读专业文章</a>
+      </div>
+
+      <!-- 替换：执业数据（均为占位） -->
+      <div class="hero-tags rv" data-delay="320">
+        <div class="chips" style="margin-top:0">
+          <span class="chip">劳动争议</span>
+          <span class="chip">买卖合同</span>
+          <span class="chip">保险合同</span>
+          <span class="chip">民间借贷</span>
+          <span class="chip">日常法律咨询</span>
+        </div>
+        <div class="hero-stats">
+          <div class="hs"><b>1<i> 年</i></b><span>Years / 执业</span></div>
+          <div class="hs"><b>10<i>+</i></b><span>Cases / 代理案件</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="circular-badge" aria-hidden="true">
+    <svg viewBox="0 0 140 140" width="100%" height="100%">
+      <defs><path id="tPath" d="M 70,70 m -52,0 a 52,52 0 1,1 104,0 a 52,52 0 1,1 -104,0"></path></defs>
+      <circle cx="70" cy="70" r="70" fill="rgba(255,255,255,.5)" stroke="rgba(15,23,42,.12)"></circle>
+      <text font-size="10.5" letter-spacing="2.5" fill="#64748B" font-family="Space Mono,monospace">
+        <textPath href="#tPath">LABOR · CONTRACT · INSURANCE · LENDING · </textPath>
+      </text>
+      <circle cx="70" cy="70" r="3.5" fill="#B08A4A"></circle>
+    </svg>
+  </div>
+</section>
+
+<!-- ================= [01] 关于 · 编辑部 7/5 ================= -->
+<section id="about" class="shell editorial-line">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="eyebrow">[ 01 ]&nbsp;&nbsp;About&nbsp;Counsel</div>
+        <h2 class="sec-title">关于<em>雷彪</em></h2>
+      </div>
+      <div class="sec-note">Profile / Credentials</div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text rv">
+        <p class="about-lead">
+          "好的律师工作，是让客户在每一个节点上都知道：现在发生了什么，下一步有多少种走法，各自的代价是什么。"
+        </p>
+        <div class="about-body">
+          <!-- 替换：您的个人简介（2–3 段） -->
+          <p>雷彪律师自 2025年执业以来扎根本地，长期代理<strong>劳动争议、买卖合同、保险合同、民间借贷</strong>等与老百姓和小微企业切身相关的纠纷：既替被违法辞退的劳动者争取赔偿，也帮供货方追回拖欠多年的货款；既协助投保人应对拒赔，也帮出借人拿回本息。</p>
+          <p>他坚持<strong>「以裁判者视角准备案件」</strong>：诉讼方案先经过证据链与法律适用的双重推演，再进入程序；对本地法院与仲裁机构的裁判尺度，有多年一线观察。案子不分大小，标准只有一条——经得起推敲。</p>
+          <p>工作之外，他在公众号持续输出<strong>专业长文</strong>，把真实案件里验证过的方法拆给同行与当事人——这个网站，就是这些公开输出的总目录。</p>
+        </div>
+
+        <div class="cred rv" data-delay="120">
+          <div class="cred-title">Credentials / 执业资格</div>
+          <!-- 替换：您的学历、资格、职务（每行一条） -->
+          <div class="cred-row"><span class="k">职业</span><span class="v">中华人民共和国执业律师（执业证号：占位）</span></div>
+          <div class="cred-row"><span class="k">律所</span><span class="v">某市某律师事务所（占位，请替换）</span></div>
+          <div class="cred-row"><span class="k">身份</span><span class="v">某市律师协会会员（占位）</span></div>
+        </div>
+      </div>
+
+      <div class="about-visual rv" data-delay="200">
+        <!-- 肖像位：请将此占位块替换为您的正式照片 <img src="portrait.jpg" alt="沈知远律师"> -->
+        <figure class="portrait-frame">
+          <div class="portrait-inner"><span class="glyph">雷彪</span></div>
+          <figcaption class="portrait-caption">
+            <span class="t">Portrait / 2026</span>
+            <span class="d">请替换为正式执业照</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 暗色理念带（深海白盒） ================= -->
+<section id="manifesto">
+  <div class="dark-glow g1" aria-hidden="true"></div>
+  <div class="dark-glow g2" aria-hidden="true"></div>
+  <div class="mani-stroke" aria-hidden="true">判断</div>
+
+  <div class="mani-inner rv">
+    <div class="mani-eyebrow">[ — ]&nbsp;&nbsp;Practice&nbsp;Manifesto</div>
+    <p class="mani-quote">
+      律师真正值钱的部分是<span class="g">判断</span>——<br>
+      在信息不全时，仍敢对方案签字。
+    </p>
+    <p class="mani-sub">
+      检索可以交给系统，文书可以交给流程；但「这个案子值不值得打」「这一条要不要让」，
+      只能来自对证据、商业与裁判倾向的整体判断。我把执业生涯的大部分时间，都花在练这件事上。
+    </p>
+    <div class="mani-line"></div>
+    <div class="mani-attr">— 雷彪 · 执业手记</div>
+  </div>
+</section>
+
+<!-- ================= [02] 代表案例 · 展签室 ================= -->
+<section id="cases" class="shell editorial-line">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="eyebrow">[ 02 ]&nbsp;&nbsp;Representative&nbsp;Matters</div>
+        <h2 class="sec-title">代表<em>案例</em></h2>
+      </div>
+      <div class="sec-note">Curated / Anonymized</div>
+    </div>
+
+    <p class="cases-disclaimer rv">基于保密义务，以下案件信息均已脱敏处理；个案结果不构成对未来案件的承诺。</p>
+
+    <!-- 案例卡片由页面底部 JS 的 CASES 数组自动渲染，加更只需在数组末尾追加一条 -->
+    <div class="case-grid" id="caseGrid"></div>
+
+    <div class="more-note rv" id="caseMore">· 共 <b>0</b> 件代表案例 · 持续更新中 ·</div>
+  </div>
+</section>
+
+<!-- ================= [03] 专业文章 · 编辑部索引 ================= -->
+<section id="writing" class="shell editorial-line">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="eyebrow">[ 03 ]&nbsp;&nbsp;Selected&nbsp;Writing</div>
+        <h2 class="sec-title">专业<em>文章</em></h2>
+      </div>
+      <div class="sec-note">Publications / Long-form</div>
+    </div>
+
+    <!-- 文章卡片由页面底部 JS 的 ARTICLES 数组自动渲染，加更只需在数组末尾追加一条 -->
+    <div class="art-grid" id="artGrid"></div>
+
+    <div class="more-note rv" id="artMore">· 共 <b>0</b> 篇专业文章 · 持续更新中 ·</div>
+  </div>
+</section>
+
+<!-- ================= [04] 联系 · 前台 ================= -->
+<section id="contact" class="shell editorial-line">
+  <div class="wrap contact-box">
+    <div class="rv">
+      <div class="eyebrow" style="justify-content:center">[ 04 ]&nbsp;&nbsp;Get&nbsp;in&nbsp;Touch</div>
+      <h2 class="sec-title" style="margin-top:1.1rem">预约<em>咨询</em></h2>
+      <p style="margin-top:1.2rem;font-weight:300;color:var(--ink-3);max-width:32rem;margin-left:auto;margin-right:auto">
+        首次沟通不收取费用。请简要说明纠纷情况，通常在一个工作日内回复。
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- 替换：您的联系方式（4 项 + 公众号二维码图片） -->
+      <a href="tel:+8613800000000" class="contact-cell rv" data-delay="0">
+        <div class="k">Phone / 电话</div>
+        <div class="v">138-0000-0000</div>
+        <div class="d">工作日 09:00–18:00</div>
+      </a>
+      <a href="mailto:counsel@example.com" class="contact-cell rv" data-delay="80">
+        <div class="k">Email / 邮箱</div>
+        <div class="v">counsel@example.com</div>
+        <div class="d">案件材料请附简要说明</div>
+      </a>
+      <a href="#contact" class="contact-cell rv" data-delay="0">
+        <div class="k">WeChat / 公众号</div>
+        <div class="v">雨田法律笔记</div>
+        <div class="d">长文与模板优先在公众号发布</div>
+      </a>
+      <div class="contact-cell rv" data-delay="80">
+        <div class="k">Office / 地址</div>
+        <div class="v">某省某市某区某路 88 号</div>
+        <div class="d">某写字楼 6 层 · 来访请先预约（占位）</div>
+      </div>
+    </div>
+
+    <div class="rv" style="display:flex;justify-content:center">
+      <div style="width:13rem">
+        <!-- 替换：将此占位框换为公众号二维码图片 <img src="qr.jpg" alt="公众号二维码"> -->
+        <div class="qr-slot">
+          <span class="q">▣</span>
+          <span class="t">QR / 公众号二维码</span>
+        </div>
+        <p style="text-align:center;font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;color:var(--ink-4);margin-top:.7rem;text-transform:uppercase">Scan&nbsp;to&nbsp;Follow</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 跑马灯 + 页脚 ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-content">
+    正 · 衡 · 信 · 慎 ·&nbsp;正 · 衡 · 信 · 慎 ·&nbsp;正 · 衡 · 信 · 慎 ·&nbsp;正 · 衡 · 信 · 慎 ·&nbsp;
+  </div>
+</div>
+<footer>
+  <div class="f1">© 2026 雷彪 · 律师</div>
+  <div class="f2">本网站内容仅为一般性信息分享，不构成法律意见或个案承诺。</div>
+</footer>
+
+<!-- ================= 键盘快捷键面板 ================= -->
+<div class="kbd-modal" id="kbdModal" role="dialog" aria-label="键盘快捷键">
+  <div class="kbd-panel">
+    <div class="kbd-title">Keyboard Shortcuts</div>
+    <div class="kbd-row"><span>回到顶部</span><span class="keys"><kbd>G</kbd><kbd>H</kbd></span></div>
+    <div class="kbd-row"><span>关于</span><span class="keys"><kbd>G</kbd><kbd>A</kbd></span></div>
+    <div class="kbd-row"><span>案例</span><span class="keys"><kbd>G</kbd><kbd>C</kbd></span></div>
+    <div class="kbd-row"><span>文章</span><span class="keys"><kbd>G</kbd><kbd>W</kbd></span></div>
+    <div class="kbd-row"><span>联系</span><span class="keys"><kbd>G</kbd><kbd>L</kbd></span></div>
+    <div class="kbd-row"><span>关闭面板</span><span class="keys"><kbd>Esc</kbd></span></div>
+  </div>
+</div>
+
+<script>
+/* ==================================================================
+   内容数据中心：日后加更案例 / 文章，只需在下方数组末尾照格式追加一条
+   —— 编号（C07、A7…）与「共 N 件 / 篇 · 持续更新中」计数自动生成
+   ================================================================== */
+
+/* ★ 代表案例数据（均已脱敏）
+   字段：tag 领域标签 / title 案件名称 / role 我方角色 / proc 程序阶段
+         result 脱敏后的结果 / desc 一句话办案要点 */
+const CASES = [
+  { tag:'劳动争议', title:'某违法解除劳动合同仲裁案',
+    role:'劳动者代理人', proc:'劳动仲裁 · 一审', result:'赔偿金请求获支持（2N）',
+    desc:'以考勤、工资流水与解除通知固定入职时间与程序瑕疵，单位举证不能，仲裁与一审均支持违法解除认定。' },
+  { tag:'劳动争议', title:'某工伤保险待遇纠纷案',
+    role:'工伤职工代理人', proc:'工伤认定 · 仲裁 · 一审', result:'待遇差额全额获支持',
+    desc:'围绕停工留薪期与本人工资口径组织证据，纠正单位按最低基数缴费造成的待遇差额。' },
+  { tag:'买卖合同', title:'某货款结算纠纷案（拖欠三年）',
+    role:'供货方代理人', proc:'一审 · 执行', result:'货款及违约金全额支持',
+    desc:'无书面合同情形下，以送货单、对账单与微信记录互证交易习惯，形成完整证据链后快速执行到位。' },
+  { tag:'保险合同', title:'某重大疾病保险拒赔案',
+    role:'投保人代理人', proc:'一审', result:'保险金及利息获判赔',
+    desc:'针对「未如实告知」拒赔理由，援引询问主义与不可抗辩条款，证明投保单系业务员代填。' },
+  { tag:'民间借贷', title:'某大额民间借贷纠纷案（仅有转账凭证）',
+    role:'出借人代理人', proc:'一审 · 二审', result:'本息全额支持',
+    desc:'无借条情形下，以转账备注、催款录音与对方部分还款行为补强借贷合意，排除「其他经济往来」抗辩。' },
+  { tag:'民间借贷', title:'某夫妻共同债务认定案',
+    role:'出借人代理人', proc:'一审 · 二审', result:'认定为夫妻共同债务',
+    desc:'借款用于共同经营的事实，通过进货单据与收款账户流向逐笔还原，二审改判配偶承担连带责任。' },
+];
+
+/* ★ 专业文章数据
+   字段：cat 分类 / isNew 是否标 NEW / title 标题 / excerpt 摘要
+         time 阅读分钟数 / href 文章链接（公众号或专栏地址） */
+const ARTICLES = [
+  { cat:'劳动争议', isNew:true, time:12, href:'#',
+    title:'被单位辞退后，N、N+1、2N 到底怎么算？',
+    excerpt:'三种补偿的适用场景完全不同：合法解除、协商解除与违法解除各有路径。本文用一张决策图把口径讲清楚。' },
+  { cat:'劳动争议', isNew:false, time:10, href:'#',
+    title:'没签书面劳动合同，二倍工资能主张多少？',
+    excerpt:'二倍工资的起算、上限与时效在实践中争议最大。本文按仲裁时效逐段拆解，并给出证据固定清单。' },
+  { cat:'买卖合同', isNew:false, time:9, href:'#',
+    title:'没有书面合同，货款还能要回来吗？',
+    excerpt:'送货单没有签字、只有微信对账，钱照样能要。关键在于把零散凭证组织成「交易习惯」的完整闭环。' },
+  { cat:'保险合同', isNew:false, time:11, href:'#',
+    title:'重疾险拒赔的三个常见理由与应对',
+    excerpt:'未如实告知、等待期出险、疾病定义不符是拒赔三大高发区。投保人一方能打的牌，比想象中多。' },
+  { cat:'民间借贷', isNew:true, time:8, href:'#',
+    title:'只有转账记录没有借条，钱能要回来吗？',
+    excerpt:'转账凭证只证明「钱给过」，不证明「是借款」。本文拆解补强借贷合意的四类证据及其取证要点。' },
+  { cat:'民间借贷', isNew:false, time:7, href:'#',
+    title:'民间借贷利息的司法保护上限怎么算',
+    excerpt:'LPR 四倍上限的起算时点、既往约定与逾期利率的衔接，一文说清。附三个常见误区的对照表。' },
+];
+
+/* ---------- 1. 渲染案例卡片 ---------- */
+const pad = n => String(n).padStart(2, '0');
+document.getElementById('caseGrid').innerHTML = CASES.map((c, i) => `
+  <article class="case-card rv" data-delay="${i % 2 ? 80 : 0}">
+    <div class="cg"></div>
+    <div class="cc-top"><span class="cc-num">C&nbsp;${pad(i + 1)}</span><span class="cc-tag">${c.tag}</span></div>
+    <h3 class="cc-title">${c.title}</h3>
+    <div class="cc-labels">
+      <div class="lab"><span class="k">角色</span><span class="v">${c.role}</span></div>
+      <div class="lab"><span class="k">程序</span><span class="v">${c.proc}</span></div>
+      <div class="lab"><span class="k">结果</span><span class="v">${c.result}</span></div>
+    </div>
+    <p class="cc-desc">${c.desc}</p>
+  </article>`).join('');
+document.querySelector('#caseMore b').textContent = CASES.length;
+
+/* ---------- 2. 渲染文章卡片 ---------- */
+document.getElementById('artGrid').innerHTML = ARTICLES.map((a, i) => `
+  <a href="${a.href}" class="art-card rv" data-delay="${i % 2 ? 80 : 0}">
+    <div class="ac-top"><span class="ac-cat">${a.cat}</span>${a.isNew ? '<span class="ac-new">NEW</span>' : ''}</div>
+    <h3 class="ac-title">${a.title}</h3>
+    <p class="ac-excerpt">${a.excerpt}</p>
+    <div class="ac-foot"><span>A${i + 1} · ${a.time} MIN READ</span><span class="ac-arrow">→</span></div>
+  </a>`).join('');
+document.querySelector('#artMore b').textContent = ARTICLES.length;
+
+/* ---------- 3. 阅读进度条 ---------- */
+const prog = document.getElementById('progress');
+addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const p = h.scrollTop / (h.scrollHeight - h.clientHeight) * 100;
+  prog.style.width = p + '%';
+}, { passive: true });
+
+/* ---------- 4. Hero 标题揭示（印刷开机镜头） ---------- */
+window.addEventListener('load', () => {
+  setTimeout(() => document.getElementById('heroTitle').classList.add('is-revealed'), 200);
+});
+
+/* ---------- 5. 滚动显现（IntersectionObserver） ---------- */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const d = +e.target.dataset.delay || 0;
+      setTimeout(() => e.target.classList.add('is-in'), d);
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+/* ---------- 6. 案例卡鼠标追踪光晕 ---------- */
+document.querySelectorAll('.case-card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+    card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+  });
+});
+
+/* ---------- 7. 键盘快捷键（G+X 导航，? 面板） ---------- */
+const modal = document.getElementById('kbdModal');
+let gPending = false;
+addEventListener('keydown', e => {
+  if (e.key === 'Escape') { modal.classList.remove('open'); gPending = false; return; }
+  if (e.key === '?' || (e.shiftKey && e.key === '/')) { modal.classList.toggle('open'); return; }
+  if (e.key.toLowerCase() === 'g') { gPending = true; setTimeout(() => gPending = false, 900); return; }
+  if (!gPending) return;
+  const map = { h: '#hero', a: '#about', c: '#cases', w: '#writing', l: '#contact' };
+  const t = map[e.key.toLowerCase()];
+  if (t) { e.preventDefault(); location.hash = t; gPending = false; modal.classList.remove('open'); }
+});
+</script>
+</body>
+</html>
